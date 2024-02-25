@@ -9,6 +9,7 @@ import Layout from '@components/layout'
 import { Module } from '@components/modules'
 
 const Page = ({ data }) => {
+  debugger
   const router = useRouter()
 
   if (!router.isFallback && !data) {
@@ -31,6 +32,7 @@ const Page = ({ data }) => {
 }
 
 export async function getStaticProps({ params, preview, previewData }) {
+  debugger
   const pageData = await getPage(params.slug.join('/'), {
     active: preview,
     token: previewData?.token,

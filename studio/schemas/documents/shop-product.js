@@ -28,7 +28,7 @@ export default {
       options: { columns: 2 }
     }
   ],
-  icon: () => <Gift />,
+  icon: () => <CloudArrowDown />,
   fields: [
     {
       title: 'Display Title',

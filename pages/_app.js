@@ -35,6 +35,7 @@ if (isBrowser) {
 }
 
 const Site = ({ Component, pageProps, router }) => {
+  debugger
   const togglePageTransition = useTogglePageTransition()
   const { isPageTransition } = useSiteContext()
 
@@ -106,6 +107,7 @@ const Site = ({ Component, pageProps, router }) => {
 
 // Site wrapped with Context Providers
 const MyApp = ({ Component, pageProps, router }) => {
+  debugger
   const { data } = pageProps
 
   return (

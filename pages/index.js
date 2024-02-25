@@ -8,7 +8,7 @@ import { Module } from '@components/modules'
 
 const Home = ({ data }) => {
   const { site, page } = data
-
+  debugger
   if (!page) {
     return (
       <Error
@@ -28,6 +28,7 @@ const Home = ({ data }) => {
 }
 
 export async function getStaticProps({ preview, previewData }) {
+  debugger
   const pageData = await getStaticPage(
     `
     *[_type == "page" && _id == ${queries.homeID}] | order(_updatedAt desc)[0]{
