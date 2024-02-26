@@ -80,8 +80,8 @@ const ProductCard = React.forwardRef(
       const currentOption = defaultOption?.length
         ? defaultOption[defaultOption.length - 1]
         : {
-            name: product.options[0]?.name,
-            value: product.options[0]?.values[0],
+            name: product.options?.[0]?.name,
+            value: product.options?.[0]?.values[0],
           }
 
       return hasObject(v.options, currentOption)

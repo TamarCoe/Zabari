@@ -140,6 +140,8 @@ const Product = ({ data }) => {
 }
 
 function getProductSchema(product, activeVariantID, site) {
+  debugger
+  alert("fdfd")
   if (!product) return null
 
   const router = useRouter()
@@ -184,7 +186,7 @@ export async function getStaticProps({ params, preview, previewData }) {
   }
 }
 
-export async function getStaticPaths() {
+export async function getStaticPaths() {  
   const allProducts = await getAllDocSlugs('product')
 
   return {

@@ -23,13 +23,13 @@ import Icon from '@components/icon'
 
 const Header = ({ data = {}, isTransparent, onSetup = () => {} }) => {
   // expand our header data
-  const {
-    promo,
-    menuDesktopLeft,
-    menuDesktopRight,
-    menuMobilePrimary,
-    menuMobileSecondary,
-  } = data
+  // const {
+  //   // promo,
+  //   menuDesktopLeft,
+  //   menuDesktopRight,
+  //   menuMobilePrimary,
+  //   menuMobileSecondary,
+  // } = data
 
   // setup states
   const [isMobileNavOpen, setMobileNavOpen] = useState(false)
@@ -64,13 +64,13 @@ const Header = ({ data = {}, isTransparent, onSetup = () => {} }) => {
 
   return (
     <>
-      <a href="#content" className="skip-link">
+      {/* <a href="#content" className="skip-link">
         Skip to Content
-      </a>
+      </a> */}
 
-      <PromoBar data={promo} />
+      {/* <PromoBar data={promo} /> */}
 
-      <header
+      {/* <header
         className={cx('header', {
           'is-overlay': isTransparent,
           'is-white': isTransparent && !meganav.isOpen && observerIsVisible,
@@ -100,7 +100,7 @@ const Header = ({ data = {}, isTransparent, onSetup = () => {} }) => {
 
               <nav className="main-navigation" role="navigation">
                 {/* Mobile Header Menu */}
-                <div id="mobile-nav" className="main-navigation--mobile">
+                {/* <div id="mobile-nav" className="main-navigation--mobile">
                   <FocusTrap active={isMobileNavOpen}>
                     <div>
                       <button
@@ -161,10 +161,10 @@ const Header = ({ data = {}, isTransparent, onSetup = () => {} }) => {
                   </FocusTrap>
 
                   <CartToggle />
-                </div>
+                </div> */}
 
                 {/* Desktop Header Menu */}
-                <div className="main-navigation--desktop">
+                {/* <div className="main-navigation--desktop">
                   <div className="menu-left">
                     {menuDesktopLeft?.items && (
                       <Menu
@@ -188,26 +188,26 @@ const Header = ({ data = {}, isTransparent, onSetup = () => {} }) => {
                   </div>
                 </div>
               </nav>
-            </div>
+            </div> */}
 
-            <div
+            {/* <div
               className={cx('header--border', {
                 'is-hidden': meganav.isOpen,
               })}
-            />
-          </div>
+            /> */}
+          {/* </div> */}
 
-          <MegaNavigation
-            items={[
-              ...(menuDesktopLeft?.items || []),
-              ...(menuDesktopRight?.items || []),
-            ]}
-            headerHeight={
-              isTransparent && observerIsVisible ? headerHeight : false
-            }
-          />
-        </div>
-      </header>
+          {/* <MegaNavigation */}
+      {/* //       items={[
+      //         ...(menuDesktopLeft?.items || []),
+      //         ...(menuDesktopRight?.items || []),
+      //       ]}
+      //       headerHeight={
+      //         isTransparent && observerIsVisible ? headerHeight : false
+      //       }
+      //     />
+      //   </div>
+      // </header> */}
 
       <span ref={observe} className="header--observer" />
     </>

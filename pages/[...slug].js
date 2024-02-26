@@ -46,6 +46,7 @@ export async function getStaticProps({ params, preview, previewData }) {
 }
 
 export async function getStaticPaths() {
+  debugger
   const allPages = await getAllDocSlugs('page')
 
   return {

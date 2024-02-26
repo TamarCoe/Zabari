@@ -114,9 +114,9 @@ export default HeadSEO
 function replaceTemplateTags(string, templateTags = []) {
   let newString = string
 
-  templateTags.map((v) => {
-    newString = newString.replace(new RegExp(v.tag, 'g'), v.value)
-  })
+  // templateTags.map((v) => {
+  //   newString = newString.replace(new RegExp(v.tag, 'g'), v.value)
+  // })
 
   return newString
 }

@@ -30,15 +30,15 @@ export default {
   ],
   icon: () => <CloudArrowDown />,
   fields: [
-    {
-      title: 'Display Title',
-      name: 'title',
-      type: 'string',
-      group: 'content'
-    },
+    // {
+    //   title: 'Display Title',
+    //   name: 'title',
+    //   type: 'string',
+    //   group: 'content'
+    // },
     {
       title: 'Description',
-      name: 'description',
+      name: 'descriptionHtml',
       type: 'simplePortableText',
       group: 'content'
     },
@@ -220,7 +220,7 @@ export default {
     },
     {
       title: 'Product Title',
-      name: 'productTitle',
+      name: 'title',
       type: 'string',
       readOnly: true,
       fieldset: '2up',
@@ -228,7 +228,7 @@ export default {
     },
     {
       title: 'Product ID',
-      name: 'productID',
+      name: 'id',
       type: 'number',
       readOnly: true,
       fieldset: '2up',
@@ -242,13 +242,27 @@ export default {
       fieldset: '2up',
       group: 'shopify'
     },
+    // {
+    //   title: 'Compare Price (cents)',
+    //   name: 'priceRange.maxVariantPrice',
+    //   type: 'number',
+    //   readOnly: true,
+    //   fieldset: '2up',
+    //   group: 'shopify'
+    // },
     {
-      title: 'Compare Price (cents)',
-      name: 'comparePrice',
-      type: 'number',
-      readOnly: true,
-      fieldset: '2up',
-      group: 'shopify'
+      type: 'object',
+      name: 'priceRange',
+      group: 'shopify',
+      title:'price',
+      fields: [ // fields must be defined, and it must be an array
+        {
+          name: 'maxVariantPrice', // field name is required and must be unique
+          type: 'number', // field type is required,
+          // group: 'shopify',
+          title:'price1'
+        }
+      ]
     },
     {
       title: 'In Stock?',
@@ -300,8 +314,15 @@ export default {
       group: 'shopify'
     },
     {
+      title: 'Image',
+      name: 'previewImageUrl',
+      type: 'url',
+      description: 'Recommended size: 1200x630 (PNG or JPG)',
+      group: 'shopify'
+    },
+    {
       title: 'Deleted from Shopify?',
-      name: 'wasDeleted',
+      name: 'isDeleted',
       type: 'boolean',
       readOnly: true,
       hidden: true,

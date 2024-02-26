@@ -27,8 +27,8 @@ const thumbAnim = {
 const ProductThumbnail = ({ thumbnails = [], activeVariant }) => {
   const { options } = activeVariant
 
-  const defaultThumbnails = thumbnails.find((set) => !set.forOption)
-  const variantThumbnails = thumbnails.find((set) => {
+  const defaultThumbnails = thumbnails?.find((set) => !set.forOption)
+  const variantThumbnails = thumbnails?.find((set) => {
     const option = set.forOption
       ? {
           name: set.forOption.split(':')[0],

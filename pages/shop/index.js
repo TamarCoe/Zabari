@@ -46,8 +46,6 @@ export async function getStaticProps({ preview, previewData }) {
         }
       },
       products[wasDeleted != true && isDraft != true]->${queries.product},
-      title,
-      seo
     }
   `,
     {
